@@ -1,0 +1,27 @@
+<br><br>
+<h2>Lists of Tasks</h2>
+<br><br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Task Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( let index = 0; index < cars.length; index++ ) { %>
+            <tr>
+                <td><%=cars[index].make  %></td>
+                <td><%=cars[index].Type  %></td>
+                <td><%=cars[index].Description  %></td>                
+                <td><a href="/cars/edit/<%=cars[index]._id  %>" class="btn btn-warning btn-sm">Edit</a></td>
+                <td><a href="/cars/delete/<%=cars[index]._id  %>" class="btn btn-danger btn-sm">Delete</a></td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+<a href="/cars/add" class="btn btn-info">Add New Task</a>
